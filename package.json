@@ -1,9 +1,9 @@
 {
-  "name": "calendar-challenge",
+  "name": "calendar-reminder-app",
   "version": "1.0.0",
-  "description": "Practice with react creating a calendar component",
+  "description": "Practice with react creating a calendar-reminder app",
   "main": "src/index.tsx",
-  "repository": "http://liederivative.github.com/calendar-challenge",
+  "repository": "http://github.com/liederivative/calendar-reminder-app",
   "author": "A.J.",
   "license": "MIT",
   "postcss": {
