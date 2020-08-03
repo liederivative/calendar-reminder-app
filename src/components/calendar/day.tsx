@@ -13,6 +13,8 @@ const CalendarDay: React.FunctionComponent<Props> = ({ date: dateString, format,
     let pivoteDate = useRecoilValue(CalendarState);
     const hashTable = useRecoilValue(ReminderHashTable);
     let reminders = hashTable[dateString] || [];
+    // because we have a fix height for the reminders and the calendar 
+    // we can assume that is safe to detect an overflow after four elements are added.
     let scrollStyle: React.CSSProperties = (reminders.length > 4)?{overflowY: 'scroll'}:{};
 
     let day = moment(dateString).startOf('day');

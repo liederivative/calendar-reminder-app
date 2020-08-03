@@ -7,10 +7,10 @@ import Calendar from './containers/Calendar';
 import './index.css';
 
 
-const App: React.FunctionComponent<{}> = hot( () => {
+const App: React.FunctionComponent<{}> = hot(() => {
     return (
         <RecoilRoot>
-                <Calendar />
+            <Calendar />
         </RecoilRoot>
     )
 })

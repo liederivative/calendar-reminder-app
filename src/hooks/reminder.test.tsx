@@ -25,8 +25,8 @@ describe("Reminder Actions", () => {
     });
 
     it("should add a new reminder but the title should has 30 chars max", () => {
-        let newFormState = {...formValue, title: Array(40).join('')};
-        let resultTitle = Array(30).join('');
+        let newFormState = {...formValue, title: Array(41).join('a')};
+        let resultTitle = Array(31).join('a');
         const { result } = renderHook(() => {
         const hashTable = useRecoilValue(ReminderHashTable);
         const { addReminder } = useReminderActions();

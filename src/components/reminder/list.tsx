@@ -22,6 +22,8 @@ const modalStyle = {
 
 const ReminderList = React.forwardRef<HTMLDivElement, Props>( ({ date }, ref) => {
     const [modalIsOpen, setIsOpen] = React.useState(false);
+    // we use a selected id in order to update the reminder card of 
+    // the selected reminder
     const [selectedID, setSelectedID] = React.useState(0);
     const hashTable = useRecoilValue(ReminderHashTable);
     

@@ -23,3 +23,6 @@ To run the tests :
 - [x] Expand the calendar to support more than the current month.
 - [x] Properly handle overflow when multiple reminders appear on the same date.
 - [x] Functionality to delete one or ALL the reminders for a specific day
+
+# Todo
+improve styling

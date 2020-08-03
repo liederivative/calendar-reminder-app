@@ -13,7 +13,7 @@ const CalendarWeekDayList = () => {
 
     const rows = [];
     let weekdayDate = moment(startOfWeek);
-
+    // we create 7 days per row 
     while (weekdayDate.isBetween(startOfWeek, endOfWeek, undefined, '[]')) {
         let weekdays = moment.weekdays().map( (dayName,idx) =>{
             let Component = <CalendarDay date={weekdayDate.format('YYYY-MM-DD')} key={`${weekdayDate.toISOString()}-day`}/>;

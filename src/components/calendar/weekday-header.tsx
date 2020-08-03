@@ -7,6 +7,8 @@ const CalendarWeekdayHeader = () => {
     const pivoteDate = useRecoilValue(CalendarState);
     const daysFormat = "dddd";
     let startDate = moment(pivoteDate).startOf('week');
+    // the idea is that in the future we could with a simple change 
+    // start from a different day instead of sunday in the calendar
     let weekdayNames = moment.weekdays().map( (day,idx) => moment(startDate).add(idx,'day').format(daysFormat) );
 
        return <div className="days row">{

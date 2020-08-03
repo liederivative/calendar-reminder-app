@@ -22,6 +22,8 @@ export const setValueReducer = (state: FormState, action: Action) => {
     }
 }
 
+// TODO: add these functions to its own file [utils]
+// so far it was not done due to time constraint
 const replaceItemAtIndex = (arr: Array<any>, index: number, newValue: any) => {
     return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
 }
@@ -51,6 +53,7 @@ export const useReminderActions = () => {
         let remindersInDate = reminder[currentDate];
         remindersInDate = [...remindersInDate];
         const index = remindersInDate.findIndex((item) => item.id === id);
+        // we don't want to update a non-existing item
         if(index < 0) return;
         remindersInDate = replaceItemAtIndex(remindersInDate, index, { ...newValue, id });
         insertReminder(reminder, currentDate, remindersInDate);
@@ -60,6 +63,7 @@ export const useReminderActions = () => {
         let remindersInDate = reminder[currentDay];
         remindersInDate = [...remindersInDate];
         const index = remindersInDate.findIndex((item) => item.id === id);
+        // we don't want to delete a non-existing item
         if(index < 0) return;
         remindersInDate = removeItemAtIndex(remindersInDate, index);
         insertReminder(reminder, currentDay, remindersInDate);

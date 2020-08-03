@@ -9,6 +9,7 @@ type Props = {
 
 
 const ReminderForcast: React.FunctionComponent<Props> = ({ city, date, time }) => {
+    // TODO: add an icon for the predected weather
     const result = useOpenWeatherAPI(city, date, time);
     return <div>{result}</div>
 

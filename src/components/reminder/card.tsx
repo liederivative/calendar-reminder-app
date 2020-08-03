@@ -16,7 +16,7 @@ const ReminderCard: React.FunctionComponent<Props> = ({id, date: dateProp, close
     const {deleteReminder} = useReminderActions();
     const hashTable = useRecoilValue(ReminderHashTable);
     const [editMode, setEditMode] = useState(false);
-    // const [editMode, setEditMode] = useState(false);
+    
     let remindersInDate = hashTable[dateProp];
     let item = remindersInDate.find(i => i.id === id);
 
