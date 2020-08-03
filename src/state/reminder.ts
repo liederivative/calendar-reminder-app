@@ -17,7 +17,7 @@ const initialColorList = [
     {name: "teal", value: "#008080"},
     {name: "blue", value: "blue"},
     {name: "red", value: "red"},
-    {name: "yellow", value: "yellow"},
+    {name: "black", value: "black"},
 ]
 export const ColorList = atom({
     key: 'ColorList',
